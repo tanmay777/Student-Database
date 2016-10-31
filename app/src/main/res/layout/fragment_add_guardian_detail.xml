@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Entity.AddStudentDetails.AddStudentDetailFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+    <TextView
+        style="@style/HeadingFont"
+        android:text="Enter Guardian detail" />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        />
+    <android.support.v7.widget.DropDownListView
+        style="@style/BodyFont"
+        android:ems="10"
+        android:entries="@array/sex"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Phone no"
+        android:inputType="phone"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        style="@style/BodyFont"
+        android:background="@drawable/buttonlayout"
+        android:text="Next"/>
+</LinearLayout>

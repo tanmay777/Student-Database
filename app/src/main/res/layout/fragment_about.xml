@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tanmayjha.studentdatabase.Entity.About.AboutFragment"
+    android:background="@drawable/app_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        style="@style/BodyFont"
+        android:text="This Project is made by:\nTanmay Jha 15BCE0618\nVaibhav Agrawal 15BCE0143\nParidhi Srivastava 15BCE0960\n\nHere we have used sqlite database which is an inbuilt android studios data base to create alter or modify data."/>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Entity.AddStudentDetails.AddStudentDetailFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+    <TextView
+        style="@style/HeadingFont"
+        android:text="Enter Family details" />
+    <EditText
+        android:layout_marginTop="10dp"
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Father's name"
+        android:inputType="textPersonName"/>
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Mother's name"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Father's phone no"
+        android:inputType="phone"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Mother's phone no"
+        android:inputType="phone"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Father's E-mail"
+        android:inputType="textEmailAddress"
+        />
+    <EditText
+        style="@style/BodyFont"
+        android:ems="10"
+        android:hint="Mother's E-mail"
+        android:inputType="textEmailAddress"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        style="@style/BodyFont"
+        android:background="@drawable/buttonlayout"
+        android:text="Next"/>
+</LinearLayout>

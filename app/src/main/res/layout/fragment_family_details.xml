@@ -1,0 +1,102 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Entity.AddStudentDetails.AddStudentDetailFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/HeadingFont"
+        android:text="Family details are: " />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Father's name:"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Mother's name:"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Address:"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Father's phone no: "/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Mother's phone no:"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Father's email address:"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Mother's email address:"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text=":  ______________"/>
+    </LinearLayout>
+</LinearLayout>

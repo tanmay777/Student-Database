@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_add_data"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Add a student data" />
+        <item
+            android:id="@+id/nav_student_detail"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Student Detail" />
+        <item
+            android:id="@+id/nav_family_detail"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Family Detail" />
+        <item
+            android:id="@+id/nav_proctor_detail"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Proctor Detail" />
+        <item
+            android:id="@+id/nav_guardian_detail"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Guardian Detail"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_share"
+            android:title="About" />
+    </group>
+
+
+</menu>
