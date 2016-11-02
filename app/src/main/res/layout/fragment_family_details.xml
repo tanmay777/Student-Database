@@ -7,10 +7,20 @@
     android:padding="10dp"
     android:background="@drawable/app_background"
     android:orientation="vertical">
-
+    <EditText
+        style="@style/HeadingFont"
+        android:hint="Enter Registration no: "
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        style="@style/BodyFont"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttonlayout"
+        android:text="Done"
+        android:textAllCaps="true"/>
     <TextView
         style="@style/HeadingFont"
-        android:text="Family details are: " />
+        android:text="Family details are: "
+        android:visibility="gone"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,24 +28,14 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Father's name:"/>
+            android:text="Father's name:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/BodyFont"
-            android:text="Mother's name:"/>
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"
+            android:id="@+id/father_name"/>
     </LinearLayout>
 
     <LinearLayout
@@ -44,11 +44,14 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Address:"/>
+            android:text="Mother's name:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"
+            android:id="@+id/mothers_name"/>
     </LinearLayout>
 
     <LinearLayout
@@ -57,11 +60,30 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Father's phone no: "/>
+            android:text="Address:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"
+            android:id="@+id/family_address"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Father's phone no: "
+            android:visibility="gone"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"
+            android:visibility="gone"
+            android:id="@+id/fathers_phone_no"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -69,11 +91,14 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Mother's phone no:"/>
+            android:text="Mother's phone no:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"
+            android:id="@+id/mothers_phone_no"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -81,11 +106,14 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Father's email address:"/>
+            android:text="Father's email address:"
+            android:visibility="gone" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"
+            android:id="@+id/fathers_email"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -93,10 +121,15 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Mother's email address:"/>
+            android:text="Mother's email address:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text=":  ______________"/>
+            android:text=":  ______________"
+            android:visibility="gone"
+            android:id="@+id/mothers_email"/>
     </LinearLayout>
 </LinearLayout>
+
+<!-- TODO: Check if i can remove ____ and still the program works-->

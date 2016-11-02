@@ -7,54 +7,74 @@
     android:padding="10dp"
     android:background="@drawable/app_background"
     android:orientation="vertical">
+
+    <EditText
+        style="@style/HeadingFont"
+        android:hint="Enter Registration no: "
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        style="@style/BodyFont"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttonlayout"
+        android:text="Done"
+        android:textAllCaps="true"/>
     <TextView
         style="@style/HeadingFont"
-        android:text="Enter Family details" />
+        android:text="Enter Family details"
+        android:visibility="gone"/>
     <EditText
         android:layout_marginTop="10dp"
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Father's name"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName"
+        android:visibility="gone"/>
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Mother's name"
         android:inputType="textPersonName"
+        android:visibility="gone"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Address"
         android:inputType="textPostalAddress"
+        android:visibility="gone"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Father's phone no"
         android:inputType="phone"
+        android:visibility="gone"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Mother's phone no"
         android:inputType="phone"
+        android:visibility="gone"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Father's E-mail"
         android:inputType="textEmailAddress"
+        android:visibility="gone"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Mother's E-mail"
         android:inputType="textEmailAddress"
+        android:visibility="gone"
         />
     <Button
         android:layout_marginTop="20dp"
         style="@style/BodyFont"
         android:background="@drawable/buttonlayout"
-        android:text="Next"/>
+        android:text="Next"
+        android:visibility="gone"/>
 </LinearLayout>

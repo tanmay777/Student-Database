@@ -21,11 +21,12 @@
         android:hint="Name"
         android:inputType="textPersonName"
         />
-    <android.support.v7.widget.DropDownListView
+    <Spinner
         style="@style/BodyFont"
-        android:ems="10"
+        android:id="@+id/spinner"
         android:entries="@array/sex"
         />
+
     <EditText
         style="@style/BodyFont"
         android:ems="10"

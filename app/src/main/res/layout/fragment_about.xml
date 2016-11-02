@@ -9,6 +9,6 @@
 
     <TextView
         style="@style/BodyFont"
-        android:text="This Project is made by:\nTanmay Jha 15BCE0618\nVaibhav Agrawal 15BCE0143\nParidhi Srivastava 15BCE0960\n\nHere we have used sqlite database which is an inbuilt android studios data base to create alter or modify data."/>
+        android:text="This Project is made by:\nTanmay Jha 15BCE0618\nVaibhav Agrawal 15BCE0143\nParidhi Srivastava 15BCE0960\n\nHere we have used sqlite database which is an inbuilt android studios data base to create alter or xsmodify data. \nHere details about any parent, guardian or student are provided by sqlite class only so as to ensure data abstraction and mistaken editting.\nDetails about certain student are only given when the specific registration no. is entered. All data is not visible to user at any given time."/>
 
 </LinearLayout>
