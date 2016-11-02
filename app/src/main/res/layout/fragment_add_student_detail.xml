@@ -14,16 +14,18 @@
         android:layout_marginTop="10dp"
         style="@style/BodyFont"
         android:ems="10"
-        android:hint="Registration No." />
+        android:hint="Registration No."
+        android:id="@+id/add_registration_no"/>
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
+        android:id="@+id/add_students_name"
         />
     <Spinner
         style="@style/BodyFont"
-        android:id="@+id/spinner"
+        android:id="@+id/add_student_sex"
         android:entries="@array/sex"
         />
 
@@ -32,27 +34,32 @@
         android:ems="10"
         android:hint="Address"
         android:inputType="textPostalAddress"
+        android:id="@+id/add_students_address"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Phone no"
         android:inputType="phone"
+        android:id="@+id/add_student_phone_no"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Blood Group"
+        android:id="@+id/add_students_blood_group"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
+        android:id="@+id/add_students_email"
         />
     <Button
         android:layout_marginTop="20dp"
         style="@style/BodyFont"
         android:background="@drawable/buttonlayout"
-        android:text="Next"/>
+        android:text="Next"
+        android:id="@+id/next_family_details"/>
 </LinearLayout>

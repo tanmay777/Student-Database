@@ -15,11 +15,12 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
+        android:id="@+id/add_guardian_name"
         />
 
     <Spinner
         style="@style/BodyFont"
-        android:id="@+id/spinner"
+        android:id="@+id/add_guardian_sex"
         android:entries="@array/sex"
         />
 
@@ -28,22 +29,26 @@
         android:ems="10"
         android:hint="Address"
         android:inputType="textPostalAddress"
+        android:id="@+id/add_guardian_address"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Phone no"
         android:inputType="phone"
+        android:id="@+id/add_guardian_phone_no"
         />
     <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
+        android:id="@+id/add_guardian_email"
         />
     <Button
         android:layout_marginTop="20dp"
         style="@style/BodyFont"
         android:background="@drawable/buttonlayout"
-        android:text="Next"/>
+        android:text="Next"
+        android:id="@+id/the_end"/>
 </LinearLayout>

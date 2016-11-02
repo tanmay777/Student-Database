@@ -8,9 +8,21 @@
     android:background="@drawable/app_background"
     android:orientation="vertical">
 
+    <EditText
+        style="@style/HeadingFont"
+        android:hint="Enter Registration no: "
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        style="@style/BodyFont"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttonlayout"
+        android:text="Done"
+        android:textAllCaps="true"/>
+
     <TextView
         style="@style/HeadingFont"
-        android:text="Student details are: " />
+        android:text="Student details are: "
+        android:visibility="gone"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,24 +30,13 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Name:"/>
+            android:text="Name:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/BodyFont"
-            android:text="Registration no:"/>
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <LinearLayout
@@ -44,11 +45,13 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Sex:"/>
+            android:text="Registration no:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <LinearLayout
@@ -57,11 +60,28 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Address:"/>
+            android:text="Sex:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="Address:"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            style="@style/BodyFont"
+            android:text="  ______________"
+            android:visibility="gone"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -69,11 +89,13 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Phone no:"/>
+            android:text="Phone no:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -81,10 +103,12 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Blood Group:"/>
+            android:text="Blood Group:"
+            android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="  ______________"/>
+            android:text="  ______________"
+            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>

@@ -10,7 +10,7 @@
 
     <EditText
         style="@style/HeadingFont"
-        android:hint="Enter Registration no: "
+        android:hint="Enter Proctor ID: "
         android:layout_gravity="center_horizontal"/>
     <Button
         style="@style/BodyFont"
