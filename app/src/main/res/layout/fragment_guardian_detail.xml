@@ -11,13 +11,15 @@
     <EditText
         style="@style/HeadingFont"
         android:hint="Enter Registration no: "
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/guardian_fragemnts_registration_no"/>
     <Button
         style="@style/BodyFont"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/buttonlayout"
         android:text="Done"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:id="@+id/guardian_detail_fragment_button"/>
 
     <TextView
         style="@style/HeadingFont"

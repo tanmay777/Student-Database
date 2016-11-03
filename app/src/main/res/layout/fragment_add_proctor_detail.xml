@@ -17,6 +17,11 @@
         android:inputType="textPersonName"
         android:id="@+id/add_proctor_name"
         />
+    <EditText
+        style="@style/BodyFont"
+        android:hint="Enter his student's registration no"
+        android:id="@+id/add_proctors_student_registration_no"/>
+    <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Proctor Id"

@@ -11,13 +11,15 @@
     <EditText
         style="@style/HeadingFont"
         android:hint="Enter Registration No: "
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/proctor_registration_no"/>
     <Button
         style="@style/BodyFont"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/buttonlayout"
         android:text="Done"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:id="@+id/proctor_detail_fragment_done"/>
 
     <TextView
         style="@style/HeadingFont"
@@ -36,7 +38,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_name"/>
     </LinearLayout>
 
     <LinearLayout
@@ -51,7 +54,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_id"/>
     </LinearLayout>
 
     <LinearLayout
@@ -66,7 +70,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_sex"/>
     </LinearLayout>
 
     <LinearLayout
@@ -81,7 +86,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_age"/>
     </LinearLayout>
 
     <LinearLayout
@@ -96,7 +102,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_office_no"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -110,7 +117,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_phone_no"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -124,7 +132,8 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_email_address"/>
     </LinearLayout>
 
     <LinearLayout
@@ -139,6 +148,7 @@
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
             android:text="  ______________"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:id="@+id/proctor_birthdate"/>
     </LinearLayout>
 </LinearLayout>
