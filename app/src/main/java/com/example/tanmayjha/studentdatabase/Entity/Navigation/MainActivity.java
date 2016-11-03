@@ -1,5 +1,6 @@
 package com.example.tanmayjha.studentdatabase.Entity.Navigation;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Entity.About.AboutFragment;
 import com.example.tanmayjha.studentdatabase.Entity.AddStudentDetails.AddStudentDetailFragment;
 import com.example.tanmayjha.studentdatabase.Entity.FamilyDetails.FamilyDetailsFragment;
@@ -23,7 +25,7 @@ import com.example.tanmayjha.studentdatabase.Entity.StudentDetails.StudentDetail
 import com.example.tanmayjha.studentdatabase.R;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,FragmentChangeListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,14 @@ public class MainActivity extends AppCompatActivity
         AddStudentDetailFragment studentDetailFragment=new AddStudentDetailFragment();
         ft.replace(R.id.container,studentDetailFragment);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.commit();
+    }
+
+    @Override
+    public void replaceFragment(Fragment fragment) {
+        //FragmentManager fragmentManager = getSupportFragmentManager();;
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.container, fragment);
         ft.commit();
     }
 

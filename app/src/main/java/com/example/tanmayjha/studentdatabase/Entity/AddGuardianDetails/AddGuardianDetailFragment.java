@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.tanmayjha.studentdatabase.Control.GuardianDatbaseHelper;
 import com.example.tanmayjha.studentdatabase.Control.ProctorDatabaseHelper;
@@ -49,17 +50,15 @@ public class AddGuardianDetailFragment extends Fragment {
         guardianaddress=(EditText)view.findViewById(R.id.add_guardian_address);
         guardianPhoneNo=(EditText)view.findViewById(R.id.add_guardian_phone_no);
         guardianEmail=(EditText)view.findViewById(R.id.add_guardian_email);
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(getActivity(), "Data has been Stored", Toast.LENGTH_SHORT).show();
             }
         });
-
         SQLiteOpenHelper guardianDatbaseHelper = new GuardianDatbaseHelper(this.getActivity());
         db = guardianDatbaseHelper.getWritableDatabase();
-        insertGuardianDetail(db,registrationno,guardianName.getText().toString(),guardianSex.getSelectedItem().toString(),guardianaddress.getText().toString(),guardianPhoneNo.getText().toString(),guardianEmail.getText().toString());
+        insertGuardianDetail(db,getArguments().getString("RegistrationNo"),guardianName.getText().toString(),guardianSex.getSelectedItem().toString(),guardianaddress.getText().toString(),guardianPhoneNo.getText().toString(),guardianEmail.getText().toString());
     }
 
     public static void insertGuardianDetail(SQLiteDatabase db, String guardianOf, String guardianName, String guardianSex, String guardianAddress, String guardianPhoneNo, String guardianEmail)

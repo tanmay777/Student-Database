@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+
+import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Control.StudentDatabaseHelper;
 import com.example.tanmayjha.studentdatabase.Entity.FamilyDetails.FamilyDetailsFragment;
 import com.example.tanmayjha.studentdatabase.Entity.Navigation.MainActivity;
@@ -52,15 +54,19 @@ public class AddStudentDetailFragment extends Fragment {
         studentsBloodGroup=(EditText)view.findViewById(R.id.add_students_blood_group);
         studentsEmail=(EditText)view.findViewById(R.id.add_students_email);
         next=(Button)view.findViewById(R.id.next_family_details);
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(), FamilyDetailsFragment.class);
-                intent.putExtra("RegistrationNo",registrationNumber.toString());
-                startActivity(intent);
-                //how to start new fragment here?
+                Fragment fr=new FamilyDetailsFragment();
+                FragmentChangeListener fc=(FragmentChangeListener)getActivity();
+                Bundle args=new Bundle();
+                args.putString("RegistrationNo",registrationNumber.getText().toString());
+                fr.setArguments(args);
+                fc.replaceFragment(fr);
             }
         });
+
         SQLiteOpenHelper studentDatabaseHelper=new StudentDatabaseHelper(this.getActivity());
         db=studentDatabaseHelper.getWritableDatabase();
         insertStudentDetail(db,registrationNumber.getText().toString(),studentsName.getText().toString(),studentsSex.getSelectedItem().toString(),studentsAddress.getText().toString(),studentsPhoneNo.getText().toString(),studentsBloodGroup.getText().toString(),studentsEmail.getText().toString());
@@ -85,5 +91,6 @@ public class AddStudentDetailFragment extends Fragment {
         super.onDestroy();
         db.close();
     }
+
 
 }

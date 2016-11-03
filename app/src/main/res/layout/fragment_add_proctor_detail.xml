@@ -17,7 +17,6 @@
         android:inputType="textPersonName"
         android:id="@+id/add_proctor_name"
         />
-    <EditText
         style="@style/BodyFont"
         android:ems="10"
         android:hint="Proctor Id"

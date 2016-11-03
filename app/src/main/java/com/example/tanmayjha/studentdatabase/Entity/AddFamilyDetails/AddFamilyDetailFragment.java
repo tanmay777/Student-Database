@@ -13,8 +13,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Control.FamilyDatabaseHelper;
 import com.example.tanmayjha.studentdatabase.Control.StudentDatabaseHelper;
+import com.example.tanmayjha.studentdatabase.Entity.FamilyDetails.FamilyDetailsFragment;
 import com.example.tanmayjha.studentdatabase.Entity.ProctorDetails.ProctorDetailsFragment;
 import com.example.tanmayjha.studentdatabase.R;
 
@@ -54,15 +56,17 @@ public class AddFamilyDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(), ProctorDetailsFragment.class);
-                //intent.putExtra(getIntent....)
-                startActivity(intent);
-                //How to start new fragment here?
+                Fragment fr=new ProctorDetailsFragment();
+                FragmentChangeListener fc=(FragmentChangeListener)getActivity();
+                Bundle args=new Bundle();
+                args.putString("RegistrationNo",getArguments().getString("RegistrationNo"));
+                fr.setArguments(args);
+                fc.replaceFragment(fr);
             }
         });
         SQLiteOpenHelper familyDatabaseHelper=new FamilyDatabaseHelper(this.getActivity());
         db=familyDatabaseHelper.getWritableDatabase();
-        insertFamilyDetails(db,registratinoNo,fathersName.getText().toString(),mothersName.getText().toString(),familyAddress.getText().toString(),fathersPhoneNo.getText().toString(),mothersPhoneNo.getText().toString(),fathersEmail.getText().toString(),mothersEmail.getText().toString());
+        insertFamilyDetails(db,getArguments().getString("RegistrationNo"),fathersName.getText().toString(),mothersName.getText().toString(),familyAddress.getText().toString(),fathersPhoneNo.getText().toString(),mothersPhoneNo.getText().toString(),fathersEmail.getText().toString(),mothersEmail.getText().toString());
     }
 
     public static void insertFamilyDetails(SQLiteDatabase db, String parentOf,String fathersName,String mothersName,String familyAddress,String fathersPhoneNo,String mothersPhoneNo,String fathersEmail,String mothersEmail)

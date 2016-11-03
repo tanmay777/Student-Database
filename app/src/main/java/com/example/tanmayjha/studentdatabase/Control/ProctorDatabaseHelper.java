@@ -25,6 +25,7 @@ public class ProctorDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE PROCTOR_DETAIL(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "PROCTOR_NAME TEXT," +
+                "PROCTOR_OF TEXT,"+
                 "PROCTOR_ID TEXT," +
                 "PROCTOR_SEX TEXT," +
                 "PROCTOR_ADDRESS TEXT," +
@@ -32,12 +33,14 @@ public class ProctorDatabaseHelper extends SQLiteOpenHelper {
                 "PROCTOR_EMAIL TEXT," +
                 "PROCTOR_AGE TEXT," +
                 "PROCTOR_DOB TEXT");
-        insertProctorDetail(sqLiteDatabase,"Rama","1234","M","C-222","23423423","rama@gmail.com","25","22-dec-91");
+        insertProctorDetail(sqLiteDatabase,"15BCE618","Rama","1234","M","C-222","23423423","rama@gmail.com","25","22-dec-91");
+        //HERE I AM ADDING ANOTHER ATTRIBUTE,i.e PROCOTOR_OF
     }
 
-    public static void insertProctorDetail(SQLiteDatabase db,String proctorName,String proctorID,String proctorSex,String proctorAddress,String proctorPhoneNo,String proctorEmail,String proctorAge,String proctorDOB)
+    public static void insertProctorDetail(SQLiteDatabase db,String proctorOf,String proctorName,String proctorID,String proctorSex,String proctorAddress,String proctorPhoneNo,String proctorEmail,String proctorAge,String proctorDOB)
     {
         ContentValues contentValues=new ContentValues();
+        contentValues.put("PROCTOR_OF",proctorOf);
         contentValues.put("PROCTOR_NAME",proctorName);
         contentValues.put("PROCTOR_ID",proctorID);
         contentValues.put("PROCTOR_SEX",proctorSex);

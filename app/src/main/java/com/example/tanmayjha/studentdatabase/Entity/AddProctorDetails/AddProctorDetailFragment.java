@@ -14,7 +14,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Control.ProctorDatabaseHelper;
+import com.example.tanmayjha.studentdatabase.Entity.GuardianDetails.GuardianDetailFragment;
+import com.example.tanmayjha.studentdatabase.Entity.ProctorDetails.ProctorDetailsFragment;
 import com.example.tanmayjha.studentdatabase.R;
 
 import java.util.Date;
@@ -24,7 +27,7 @@ import java.util.Date;
  */
 public class AddProctorDetailFragment extends Fragment {
     SQLiteDatabase db;
-    EditText proctorName,proctorId,proctorAddress,proctorPhoneNo,proctorEmail,proctorAge;
+    EditText proctorName,proctorId,proctorAddress,proctorPhoneNo,proctorEmail,proctorAge,proctorsStudentRegistrationNo;
     Spinner proctorSex;
     DatePicker proctorDob;
     Button next;
@@ -53,17 +56,29 @@ public class AddProctorDetailFragment extends Fragment {
         proctorEmail = (EditText) view.findViewById(R.id.add_proctor_email);
         proctorAge = (EditText) view.findViewById(R.id.add_proctor_age);
         proctorDob = (DatePicker) view.findViewById(R.id.add_proctor_dob);
+        //HERE I AM ADDING ANOTHER ATTRIBUTE,i.e PROCOTOR_OF
         next = (Button) view.findViewById(R.id.next_guardian_detail);
-
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fr=new GuardianDetailFragment();
+                FragmentChangeListener fc=(FragmentChangeListener)getActivity();
+                Bundle args=new Bundle();
+                args.putString("RegistrationNo",getArguments().getString("RegistrationNo"));
+                fr.setArguments(args);
+                fc.replaceFragment(fr);
+            }
+        });
         SQLiteOpenHelper proctorDatabaseHelper = new ProctorDatabaseHelper(this.getActivity());
         db = proctorDatabaseHelper.getWritableDatabase();
-        insertProctorDetail(db,proctorName.getText().toString(),proctorId.getText().toString(),proctorSex.getSelectedItem().toString(),proctorAddress.getText().toString(),proctorPhoneNo.getText().toString(),proctorEmail.getText().toString(),proctorAge.getText().toString(),proctorDob.getDayOfMonth()+""+proctorDob.getDayOfMonth()+1+""+proctorDob.getYear()+"");
+        insertProctorDetail(db,getArguments().getString("RegistrationNo"),proctorName.getText().toString(),proctorId.getText().toString(),proctorSex.getSelectedItem().toString(),proctorAddress.getText().toString(),proctorPhoneNo.getText().toString(),proctorEmail.getText().toString(),proctorAge.getText().toString(),proctorDob.getDayOfMonth()+""+proctorDob.getDayOfMonth()+1+""+proctorDob.getYear()+"");
         //TODO: Check if date syntax is correct and see how to implement next button
     }
 
-    public static void insertProctorDetail(SQLiteDatabase db,String proctorName,String proctorID,String proctorSex,String proctorAddress,String proctorPhoneNo,String proctorEmail,String proctorAge,String proctorDOB)
+    public static void insertProctorDetail(SQLiteDatabase db,String proctorOf,String proctorName,String proctorID,String proctorSex,String proctorAddress,String proctorPhoneNo,String proctorEmail,String proctorAge,String proctorDOB)
     {
         ContentValues contentValues=new ContentValues();
+        contentValues.put("PROCTOR_OF",proctorOf);
         contentValues.put("PROCTOR_NAME",proctorName);
         contentValues.put("PROCTOR_ID",proctorID);
         contentValues.put("PROCTOR_SEX",proctorSex);
