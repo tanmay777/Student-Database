@@ -29,6 +29,7 @@ public class GuardianDetailFragment extends Fragment {
     EditText registrationNo;
     TextView guardianName,guardianaddress,guardianPhoneNo,guardianEmail,guardianSex;
     Button done;
+    int flag=1;
     public GuardianDetailFragment() {
         // Required empty public constructor
     }
@@ -70,11 +71,17 @@ public class GuardianDetailFragment extends Fragment {
                         guardianaddress.setText(cursor.getString(3));
                         guardianPhoneNo.setText(cursor.getString(4));
                         guardianEmail.setText(cursor.getString(5));
+                        guardianName.setVisibility(View.VISIBLE);
+                        guardianSex.setVisibility(View.VISIBLE);
+                        guardianaddress.setVisibility(View.VISIBLE);
+                        guardianPhoneNo.setVisibility(View.VISIBLE);
+                        guardianEmail.setVisibility(View.VISIBLE);
                     }
-
+                    flag=0;
                 } catch(SQLiteException e) {
                     Toast toast = Toast.makeText(getActivity(), "Database unavailable", Toast.LENGTH_SHORT);
                     toast.show();
+
                 }
             }
         });
@@ -83,7 +90,8 @@ public class GuardianDetailFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        cursor.close();
+        if(flag==0)
+            cursor.close();
         db.close();
     }
 }

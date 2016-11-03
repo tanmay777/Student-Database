@@ -26,7 +26,7 @@ public class GuardianDatbaseHelper extends SQLiteOpenHelper {
                 "GUARDIAN_SEX TEXT," +
                 "GUARDIAN_ADDRESS TEXT," +
                 "GUARDIAN_PHONE_NO TEXT," +
-                "GUARDIAN_EMAIL TEXT");
+                "GUARDIAN_EMAIL TEXT)");
         insertGuardianDetail(sqLiteDatabase,"15BCE0618","Gunjan Jha","F","Bangalore","9382938482","gunjan@gmail.com");
     }
 

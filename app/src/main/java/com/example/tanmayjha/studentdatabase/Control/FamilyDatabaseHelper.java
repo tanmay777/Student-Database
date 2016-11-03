@@ -27,7 +27,7 @@ public class FamilyDatabaseHelper extends SQLiteOpenHelper{
                 "FATHERS_PHONENO TEXT," +
                 "MOTHERS_PHONENO TEXT," +
                 "FATHERS_EMAIL TEXT," +
-                "MOTHERS_EMAIL TEXT");
+                "MOTHERS_EMAIL TEXT)");
         insertFamilyDetails(sqLiteDatabase,"15BCE0618","Ajay Jha","Minakshi Jha","Saket,New Delhi","9650488222","9871907913","ajay.jha1@gmail.com","minakshi.jha1@gmail.com");
         insertFamilyDetails(sqLiteDatabase,"15BCE0321","Rakesh Kumar","Rakshita Kumar","SouthExtension,New Delhi","9634488222","9855907913","rakesh.kumar1@gmail.com","rakshita.kumar1@gmail.com");
 

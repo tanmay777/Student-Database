@@ -20,7 +20,7 @@ public class StudentDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE STUDENT_DETAILS(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "REGISTRATION_NO TEXT"+
+                "REGISTRATION_NO TEXT," +
                 "NAME TEXT," +
                 "SEX TEXT," +
                 "ADDRESS TEXT," +
@@ -48,7 +48,7 @@ public class StudentDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("PHONE_NO",phoneNo);
         contentValues.put("BLOOD_GROUP",bloodGroup);
         contentValues.put("EMAIL",email);
-        db.insert("DRINK",null,contentValues);
+        db.insert("STUDENT_DETAILS",null,contentValues);
 
         //Check for null column hack
     }

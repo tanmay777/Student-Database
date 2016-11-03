@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Control.ProctorDatabaseHelper;
+import com.example.tanmayjha.studentdatabase.Entity.AddGuardianDetails.AddGuardianDetailFragment;
 import com.example.tanmayjha.studentdatabase.Entity.GuardianDetails.GuardianDetailFragment;
 import com.example.tanmayjha.studentdatabase.Entity.ProctorDetails.ProctorDetailsFragment;
 import com.example.tanmayjha.studentdatabase.R;
@@ -61,7 +62,7 @@ public class AddProctorDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fr=new GuardianDetailFragment();
+                Fragment fr=new AddGuardianDetailFragment();
                 FragmentChangeListener fc=(FragmentChangeListener)getActivity();
                 Bundle args=new Bundle();
                 args.putString("RegistrationNo",getArguments().getString("RegistrationNo"));

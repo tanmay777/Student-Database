@@ -17,6 +17,7 @@ import android.widget.Spinner;
 
 import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Control.StudentDatabaseHelper;
+import com.example.tanmayjha.studentdatabase.Entity.AddFamilyDetails.AddFamilyDetailFragment;
 import com.example.tanmayjha.studentdatabase.Entity.FamilyDetails.FamilyDetailsFragment;
 import com.example.tanmayjha.studentdatabase.Entity.Navigation.MainActivity;
 import com.example.tanmayjha.studentdatabase.R;
@@ -58,7 +59,7 @@ public class AddStudentDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fr=new FamilyDetailsFragment();
+                Fragment fr=new AddFamilyDetailFragment();
                 FragmentChangeListener fc=(FragmentChangeListener)getActivity();
                 Bundle args=new Bundle();
                 args.putString("RegistrationNo",registrationNumber.getText().toString());
@@ -82,7 +83,7 @@ public class AddStudentDetailFragment extends Fragment {
         contentValues.put("PHONE_NO",phoneNo);
         contentValues.put("BLOOD_GROUP",bloodGroup);
         contentValues.put("EMAIL",email);
-        db.insert("DRINK",null,contentValues);
+        db.insert("STUDENT_DETAILS",null,contentValues);
         //Check for null column hack
     }
 

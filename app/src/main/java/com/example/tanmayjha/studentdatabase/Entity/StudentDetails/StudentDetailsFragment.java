@@ -27,6 +27,7 @@ public class StudentDetailsFragment extends Fragment {
     TextView studentsName,studentSex,studentsAddress,studentsPhoneNo,studentsBloodGroup,studentsEmail;
     EditText registrationNumber;
     Button done;
+    int flag=1;
 
     public StudentDetailsFragment() {
         // Required empty public constructor
@@ -72,8 +73,14 @@ public class StudentDetailsFragment extends Fragment {
                         studentsPhoneNo.setText(cursor.getString(4));
                         studentsBloodGroup.setText(cursor.getString(5));
                         studentsEmail.setText(cursor.getString(6));
+                        studentsName.setVisibility(View.VISIBLE);
+                        studentSex.setVisibility(View.VISIBLE);
+                        studentsAddress.setVisibility(View.VISIBLE);
+                        studentsPhoneNo.setVisibility(View.VISIBLE);
+                        studentsBloodGroup.setVisibility(View.VISIBLE);
+                        studentsEmail.setVisibility(View.VISIBLE);
                     }
-
+                    flag=0;
                 } catch(SQLiteException e) {
                     Toast toast = Toast.makeText(getActivity(), "Database unavailable", Toast.LENGTH_SHORT);
                     toast.show();
@@ -85,7 +92,8 @@ public class StudentDetailsFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        cursor.close();
+        if(flag==0)
+            cursor.close();
         db.close();
     }
 

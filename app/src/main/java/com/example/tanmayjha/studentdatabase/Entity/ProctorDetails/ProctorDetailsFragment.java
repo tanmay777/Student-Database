@@ -30,6 +30,7 @@ public class ProctorDetailsFragment extends Fragment {
     EditText registrationNo;
     TextView proctorName,proctorId,proctorSex,proctorOfficeAddress,proctorPhoneNo,proctorEmail,proctorAge,proctorBirthdate;
     Button done;
+    int flag=1;
 
     public ProctorDetailsFragment() {
         // Required empty public constructor
@@ -78,11 +79,20 @@ public class ProctorDetailsFragment extends Fragment {
                         proctorEmail.setText(cursor.getString(6));
                         proctorAge.setText(cursor.getString(7));
                         proctorBirthdate.setText(cursor.getString(8));
+                        proctorName.setVisibility(View.VISIBLE);
+                        proctorId.setVisibility(View.VISIBLE);
+                        proctorSex.setVisibility(View.VISIBLE);
+                        proctorOfficeAddress.setVisibility(View.VISIBLE);
+                        proctorPhoneNo.setVisibility(View.VISIBLE);
+                        proctorEmail.setVisibility(View.VISIBLE);
+                        proctorAge.setVisibility(View.VISIBLE);
+                        proctorBirthdate.setVisibility(View.VISIBLE);
                     }
-
+                    flag=0;
                 } catch(SQLiteException e) {
                     Toast toast = Toast.makeText(getActivity(), "Database unavailable", Toast.LENGTH_SHORT);
                     toast.show();
+                    //
                 }
             }
         });
@@ -91,7 +101,8 @@ public class ProctorDetailsFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        cursor.close();
+        if(flag==0)
+            cursor.close();
         db.close();
     }
 }

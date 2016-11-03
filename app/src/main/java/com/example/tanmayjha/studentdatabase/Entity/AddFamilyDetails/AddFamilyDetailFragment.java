@@ -16,6 +16,7 @@ import android.widget.EditText;
 import com.example.tanmayjha.studentdatabase.Boundary.FragmentChangeListener;
 import com.example.tanmayjha.studentdatabase.Control.FamilyDatabaseHelper;
 import com.example.tanmayjha.studentdatabase.Control.StudentDatabaseHelper;
+import com.example.tanmayjha.studentdatabase.Entity.AddProctorDetails.AddProctorDetailFragment;
 import com.example.tanmayjha.studentdatabase.Entity.FamilyDetails.FamilyDetailsFragment;
 import com.example.tanmayjha.studentdatabase.Entity.ProctorDetails.ProctorDetailsFragment;
 import com.example.tanmayjha.studentdatabase.R;
@@ -56,7 +57,7 @@ public class AddFamilyDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fr=new ProctorDetailsFragment();
+                Fragment fr=new AddProctorDetailFragment();
                 FragmentChangeListener fc=(FragmentChangeListener)getActivity();
                 Bundle args=new Bundle();
                 args.putString("RegistrationNo",getArguments().getString("RegistrationNo"));
