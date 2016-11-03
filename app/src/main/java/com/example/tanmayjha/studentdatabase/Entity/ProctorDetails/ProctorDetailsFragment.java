@@ -62,7 +62,7 @@ public class ProctorDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    SQLiteOpenHelper proctorDatabaseHelper  = new ProctorDatabaseHelper(this);
+                    SQLiteOpenHelper proctorDatabaseHelper  = new ProctorDatabaseHelper(getActivity());
                     db = proctorDatabaseHelper.getReadableDatabase();
                     cursor = db.query("PROCTOR_DETAIL",
                             new String[]{"PROCTOR_NAME","PROCTOR_OF","PROCTOR_ID","PROCTOR_SEX","PROCTOR_ADDRESS","PROCTOR_PHONE_NO","PROCTOR_EMAIL","PROCTOR_AGE","PROCTOR_DOB"},

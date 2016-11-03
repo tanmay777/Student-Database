@@ -12,8 +12,8 @@ public class ProctorDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "proctor details database"; // the name of our database
     private static final int DB_VERSION = 1; // the version of the database
 
-    public ProctorDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context,DB_NAME, factory, DB_VERSION);
+    public ProctorDatabaseHelper(Context context) {
+        super(context,DB_NAME, null, DB_VERSION);
     }
 
     @Override

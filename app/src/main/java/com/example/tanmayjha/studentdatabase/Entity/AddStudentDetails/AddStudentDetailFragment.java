@@ -67,7 +67,7 @@ public class AddStudentDetailFragment extends Fragment {
             }
         });
 
-        SQLiteOpenHelper studentDatabaseHelper=new StudentDatabaseHelper(this.getActivity());
+        SQLiteOpenHelper studentDatabaseHelper=new StudentDatabaseHelper(getActivity());
         db=studentDatabaseHelper.getWritableDatabase();
         insertStudentDetail(db,registrationNumber.getText().toString(),studentsName.getText().toString(),studentsSex.getSelectedItem().toString(),studentsAddress.getText().toString(),studentsPhoneNo.getText().toString(),studentsBloodGroup.getText().toString(),studentsEmail.getText().toString());
         }

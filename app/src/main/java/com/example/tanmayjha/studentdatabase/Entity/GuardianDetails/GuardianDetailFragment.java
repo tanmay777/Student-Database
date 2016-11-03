@@ -57,7 +57,7 @@ public class GuardianDetailFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    SQLiteOpenHelper guardianDatbaseHelper  = new GuardianDatbaseHelper(this);
+                    SQLiteOpenHelper guardianDatbaseHelper  = new GuardianDatbaseHelper(getActivity());
                     db = guardianDatbaseHelper.getReadableDatabase();
                     cursor = db.query("STUDENT_DETAILS",
                             new String[]{"GUARDIAN_OF","GUARDIAN_NAME","GUARDIAN_SEX","GUARDIAN_ADDRESS","GUARDIAN_PHONE_NO","GUARDIAN_EMAIL"},

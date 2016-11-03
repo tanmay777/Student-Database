@@ -14,8 +14,8 @@ public class GuardianDatbaseHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1; // the version of the database
 
 
-    public GuardianDatbaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public GuardianDatbaseHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override

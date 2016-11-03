@@ -59,14 +59,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void replaceFragment(Fragment fragment) {
-        //FragmentManager fragmentManager = getSupportFragmentManager();;
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.container, fragment);
-        ft.commit();
-    }
-
-    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -139,5 +131,14 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void replaceFragment(android.support.v4.app.Fragment fragment) {
+        //FragmentManager fragmentManager = getSupportFragmentManager();;
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.container, fragment);
+        ft.commit();
+
     }
 }

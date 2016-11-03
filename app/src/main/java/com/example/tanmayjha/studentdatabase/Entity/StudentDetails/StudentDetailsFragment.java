@@ -58,7 +58,7 @@ public class StudentDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    SQLiteOpenHelper studentDatabaseHelper  = new StudentDatabaseHelper(this);
+                    SQLiteOpenHelper studentDatabaseHelper  = new StudentDatabaseHelper(getActivity());
                     db = studentDatabaseHelper.getReadableDatabase();
                     cursor = db.query("STUDENT_DETAILS",
                             new String[]{"REGISTRATION_NO","NAME","SEX","ADDRESS","PHONE_NO","BLOOD_GROUP","EMAIL"},

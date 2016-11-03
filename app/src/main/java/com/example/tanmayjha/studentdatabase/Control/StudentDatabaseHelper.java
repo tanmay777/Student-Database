@@ -13,8 +13,8 @@ public class StudentDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "student details database"; // the name of our database
     private static final int DB_VERSION = 1; // the version of the database
 
-    public StudentDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context,DB_NAME, factory, DB_VERSION);
+    public StudentDatabaseHelper(Context context) {
+        super(context,DB_NAME, null, DB_VERSION);
     }
 
     @Override

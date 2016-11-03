@@ -59,7 +59,7 @@ public class FamilyDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    SQLiteOpenHelper familyDatabaseHelper  = new FamilyDatabaseHelper(this);
+                    SQLiteOpenHelper familyDatabaseHelper  = new FamilyDatabaseHelper(getActivity());
                     db = familyDatabaseHelper.getReadableDatabase();
                     cursor = db.query("FAMILY_DETAILS",
                             new String[]{"PARENT_OF","FATHERS_NAME","MOTHERS_NAME","ADDRESS","FATHERS_PHONENO","MOTHERS_PHONENO","FATHERS_EMAIL","MOTHERS_EMAIL"},
