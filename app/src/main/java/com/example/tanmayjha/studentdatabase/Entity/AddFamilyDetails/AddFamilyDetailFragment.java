@@ -57,6 +57,9 @@ public class AddFamilyDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SQLiteOpenHelper familyDatabaseHelper=new FamilyDatabaseHelper(getActivity());
+                db=familyDatabaseHelper.getWritableDatabase();
+                insertFamilyDetails(db,getArguments().getString("RegistrationNo"),fathersName.getText().toString(),mothersName.getText().toString(),familyAddress.getText().toString(),fathersPhoneNo.getText().toString(),mothersPhoneNo.getText().toString(),fathersEmail.getText().toString(),mothersEmail.getText().toString());
                 Fragment fr=new AddProctorDetailFragment();
                 FragmentChangeListener fc=(FragmentChangeListener)getActivity();
                 Bundle args=new Bundle();
@@ -64,11 +67,7 @@ public class AddFamilyDetailFragment extends Fragment {
                 fr.setArguments(args);
                 fc.replaceFragment(fr);
             }
-        });
-        SQLiteOpenHelper familyDatabaseHelper=new FamilyDatabaseHelper(this.getActivity());
-        db=familyDatabaseHelper.getWritableDatabase();
-        insertFamilyDetails(db,getArguments().getString("RegistrationNo"),fathersName.getText().toString(),mothersName.getText().toString(),familyAddress.getText().toString(),fathersPhoneNo.getText().toString(),mothersPhoneNo.getText().toString(),fathersEmail.getText().toString(),mothersEmail.getText().toString());
-    }
+        });}
 
     public static void insertFamilyDetails(SQLiteDatabase db, String parentOf,String fathersName,String mothersName,String familyAddress,String fathersPhoneNo,String mothersPhoneNo,String fathersEmail,String mothersEmail)
     {

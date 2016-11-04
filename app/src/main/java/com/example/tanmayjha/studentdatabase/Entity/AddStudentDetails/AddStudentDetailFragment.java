@@ -59,6 +59,9 @@ public class AddStudentDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SQLiteOpenHelper studentDatabaseHelper=new StudentDatabaseHelper(getActivity());
+                db=studentDatabaseHelper.getWritableDatabase();
+                insertStudentDetail(db,registrationNumber.getText().toString(),studentsName.getText().toString(),studentsSex.getSelectedItem().toString(),studentsAddress.getText().toString(),studentsPhoneNo.getText().toString(),studentsBloodGroup.getText().toString(),studentsEmail.getText().toString());
                 Fragment fr=new AddFamilyDetailFragment();
                 FragmentChangeListener fc=(FragmentChangeListener)getActivity();
                 Bundle args=new Bundle();
@@ -67,10 +70,6 @@ public class AddStudentDetailFragment extends Fragment {
                 fc.replaceFragment(fr);
             }
         });
-
-        SQLiteOpenHelper studentDatabaseHelper=new StudentDatabaseHelper(getActivity());
-        db=studentDatabaseHelper.getWritableDatabase();
-        insertStudentDetail(db,registrationNumber.getText().toString(),studentsName.getText().toString(),studentsSex.getSelectedItem().toString(),studentsAddress.getText().toString(),studentsPhoneNo.getText().toString(),studentsBloodGroup.getText().toString(),studentsEmail.getText().toString());
         }
 
     private static void insertStudentDetail(SQLiteDatabase db, String registrationNo, String name, String sex, String studentAddress, String phoneNo, String bloodGroup, String email)

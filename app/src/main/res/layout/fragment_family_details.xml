@@ -11,7 +11,9 @@
         style="@style/HeadingFont"
         android:hint="Enter Registration no: "
         android:layout_gravity="center_horizontal"
-        android:id="@+id/family_fragments_registration_no"/>
+        android:id="@+id/family_fragments_registration_no"
+        android:gravity="center_horizontal"
+        android:text="15BCE0618"/>
     <Button
         style="@style/BodyFont"
         android:layout_gravity="center_horizontal"
@@ -21,8 +23,7 @@
         android:id="@+id/family_detail_fragment_done"/>
     <TextView
         style="@style/HeadingFont"
-        android:text="Family details are: "
-        android:visibility="gone"/>
+        android:text="Family details are: " />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -30,8 +31,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Father's name:"
-            android:visibility="gone"/>
+            android:text="Father's name:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -46,8 +46,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Mother's name:"
-            android:visibility="gone"/>
+            android:text="Mother's name:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -62,8 +61,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Address:"
-            android:visibility="gone"/>
+            android:text="Address:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -78,8 +76,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Father's phone no: "
-            android:visibility="gone"/>
+            android:text="Father's phone no"/>
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -93,8 +90,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Mother's phone no:"
-            android:visibility="gone"/>
+            android:text="Mother's phone no:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -108,8 +104,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Father's email address:"
-            android:visibility="gone" />
+            android:text="Father's email address:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -123,7 +118,6 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Mother's email address:"
             android:visibility="gone"/>
         <TextView
             android:layout_marginTop="10dp"

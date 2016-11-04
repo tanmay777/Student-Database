@@ -12,7 +12,9 @@
         style="@style/HeadingFont"
         android:hint="Enter Registration no: "
         android:layout_gravity="center_horizontal"
-        android:id="@+id/guardian_fragemnts_registration_no"/>
+        android:id="@+id/guardian_fragemnts_registration_no"
+        android:gravity="center_horizontal"
+        android:text="15BCE0618"/>
     <Button
         style="@style/BodyFont"
         android:layout_gravity="center_horizontal"
@@ -23,8 +25,7 @@
 
     <TextView
         style="@style/HeadingFont"
-        android:text="Guardian details are: "
-        android:visibility="gone"/>
+        android:text="Guardian details are: " />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,8 +33,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Name:"
-            android:visibility="gone"/>
+            android:text="Name:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -48,8 +48,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Sex:"
-            android:visibility="gone"/>
+            android:text="Sex:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -64,8 +63,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Address:"
-            android:visibility="gone"/>
+            android:text="Address:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -79,8 +77,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Phone no:"
-            android:visibility="gone"/>
+            android:text="Phone no:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
@@ -94,8 +91,7 @@
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"
-            android:text="Email address:"
-            android:visibility="gone"/>
+            android:text="Email address:" />
         <TextView
             android:layout_marginTop="10dp"
             style="@style/BodyFont"

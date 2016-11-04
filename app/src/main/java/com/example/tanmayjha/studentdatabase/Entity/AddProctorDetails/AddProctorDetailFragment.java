@@ -62,6 +62,9 @@ public class AddProctorDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SQLiteOpenHelper proctorDatabaseHelper = new ProctorDatabaseHelper(getActivity());
+                db = proctorDatabaseHelper.getWritableDatabase();
+                insertProctorDetail(db,getArguments().getString("RegistrationNo"),proctorName.getText().toString(),proctorId.getText().toString(),proctorSex.getSelectedItem().toString(),proctorAddress.getText().toString(),proctorPhoneNo.getText().toString(),proctorEmail.getText().toString(),proctorAge.getText().toString(),proctorDob.getDayOfMonth()+""+proctorDob.getDayOfMonth()+1+""+proctorDob.getYear()+"");
                 Fragment fr=new AddGuardianDetailFragment();
                 FragmentChangeListener fc=(FragmentChangeListener)getActivity();
                 Bundle args=new Bundle();
@@ -70,10 +73,6 @@ public class AddProctorDetailFragment extends Fragment {
                 fc.replaceFragment(fr);
             }
         });
-        SQLiteOpenHelper proctorDatabaseHelper = new ProctorDatabaseHelper(this.getActivity());
-        db = proctorDatabaseHelper.getWritableDatabase();
-        insertProctorDetail(db,getArguments().getString("RegistrationNo"),proctorName.getText().toString(),proctorId.getText().toString(),proctorSex.getSelectedItem().toString(),proctorAddress.getText().toString(),proctorPhoneNo.getText().toString(),proctorEmail.getText().toString(),proctorAge.getText().toString(),proctorDob.getDayOfMonth()+""+proctorDob.getDayOfMonth()+1+""+proctorDob.getYear()+"");
-        //TODO: Check if date syntax is correct and see how to implement next button
     }
 
     public static void insertProctorDetail(SQLiteDatabase db,String proctorOf,String proctorName,String proctorID,String proctorSex,String proctorAddress,String proctorPhoneNo,String proctorEmail,String proctorAge,String proctorDOB)

@@ -60,7 +60,7 @@ public class GuardianDetailFragment extends Fragment {
                 try {
                     SQLiteOpenHelper guardianDatbaseHelper  = new GuardianDatbaseHelper(getActivity());
                     db = guardianDatbaseHelper.getReadableDatabase();
-                    cursor = db.query("STUDENT_DETAILS",
+                    cursor = db.query("GUARDIAN_DETAIL",
                             new String[]{"GUARDIAN_OF","GUARDIAN_NAME","GUARDIAN_SEX","GUARDIAN_ADDRESS","GUARDIAN_PHONE_NO","GUARDIAN_EMAIL"},
                             "GUARDIAN_OF= ?",
                             new String[]{registrationNo.getText().toString()},

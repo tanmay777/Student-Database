@@ -53,12 +53,12 @@ public class AddGuardianDetailFragment extends Fragment {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SQLiteOpenHelper guardianDatbaseHelper = new GuardianDatbaseHelper(getActivity());
+                db = guardianDatbaseHelper.getWritableDatabase();
+                insertGuardianDetail(db,getArguments().getString("RegistrationNo"),guardianName.getText().toString(),guardianSex.getSelectedItem().toString(),guardianaddress.getText().toString(),guardianPhoneNo.getText().toString(),guardianEmail.getText().toString());
                 Toast.makeText(getActivity(), "Data has been Stored", Toast.LENGTH_SHORT).show();
             }
         });
-        SQLiteOpenHelper guardianDatbaseHelper = new GuardianDatbaseHelper(this.getActivity());
-        db = guardianDatbaseHelper.getWritableDatabase();
-        insertGuardianDetail(db,getArguments().getString("RegistrationNo"),guardianName.getText().toString(),guardianSex.getSelectedItem().toString(),guardianaddress.getText().toString(),guardianPhoneNo.getText().toString(),guardianEmail.getText().toString());
     }
 
     public static void insertGuardianDetail(SQLiteDatabase db, String guardianOf, String guardianName, String guardianSex, String guardianAddress, String guardianPhoneNo, String guardianEmail)

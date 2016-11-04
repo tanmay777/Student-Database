@@ -33,7 +33,7 @@ public class ProctorDatabaseHelper extends SQLiteOpenHelper {
                 "PROCTOR_EMAIL TEXT," +
                 "PROCTOR_AGE TEXT," +
                 "PROCTOR_DOB TEXT)");
-        insertProctorDetail(sqLiteDatabase,"15BCE618","Rama","1234","M","C-222","23423423","rama@gmail.com","25","22-dec-91");
+        insertProctorDetail(sqLiteDatabase,"15BCE0618","Rama","1234","M","C-222","23423423","rama@gmail.com","25","22-dec-91");
         //HERE I AM ADDING ANOTHER ATTRIBUTE,i.e PROCOTOR_OF
     }
 
